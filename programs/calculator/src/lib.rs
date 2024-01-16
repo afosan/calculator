@@ -1,11 +1,10 @@
 use anchor_lang::prelude::*;
+use anchor_lang::solana_program::entrypoint::ProgramResult;
 
 declare_id!("CNcA6rGDgTuYvkvwnJXegigCFMdomj9XWdbp1bRzRxKv");
 
 #[program]
 pub mod calculator {
-    use anchor_lang::solana_program::entrypoint::ProgramResult;
-
     use super::*;
 
     pub fn create(ctx: Context<Create>, init_message: String) -> ProgramResult {
